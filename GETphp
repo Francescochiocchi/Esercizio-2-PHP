@@ -1,0 +1,17 @@
+<?php 
+if(isset($_GET['getButton'])){
+	$varGet = $_GET['getString'];
+	echo "La stringa presa tramite GET è $varGet";
+}
+elseif(isset($_POST['postButton'])){
+	$varPost = $_POST['postString'];
+	echo "La stringa presa tramite POST è $varPost";
+}
+elseif(isset($_POST['datiButton'])){
+	echo "Indirizzo IP: "    . $_SERVER['REMOTE_ADDR'] . '<br />';
+	echo "Server Software: " . $_SERVER['SERVER_SOFTWARE'] . "<br />";
+	echo "User Agent: "      .$_SERVER['HTTP_USER_AGENT'] . "<br />";
+	echo "Server name: "     .$_SERVER['SERVER_NAME'] . "<br />";
+	echo "Nome script: "    .$_SERVER['PHP_SELF'] . "<br />";
+}
+?>
